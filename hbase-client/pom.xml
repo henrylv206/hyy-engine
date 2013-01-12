@@ -5,8 +5,46 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>hbase client</name>
   <description>test java hbase client</description>
+  <url>http://www.hongyuyuan.com</url>
   
-  <!-- <dependencyManagement> -->
+  <scm>
+    <connection>scm:git:https://github.com/henrylv206/hyy-engine.git</connection>
+    <developerConnection>scm:git:https://github.com/henrylv206/hyy-engine.git</developerConnection>
+    <url>https://github.com/henrylv206/hyy-engine.git</url>
+  </scm>
+  
+  <issueManagement>
+  	<system>jira</system>
+  	<url>http://cc:8080/jira/browse/hbase-client</url>
+  </issueManagement>
+  
+  <ciManagement>
+  	<system>hudson</system>
+  	<url>http://cc:8080/hudson/view/hbase-client/job/hbase-client-trunk/</url>
+  </ciManagement>
+  
+  <!-- 如何创建邮件列表服务器 -->
+  <!-- <mailingLists>
+  	<mailingList>
+  		<name>Henry Lv</name>
+  		
+  	</mailingList>
+  </mailingLists> -->
+  
+  <developers>
+  	<developer>
+  		<id>henrylv</id>
+  		<name>Henry Lv</name>
+  		<email>henry.lv206@gmail.com</email>
+  		<timezone>+8</timezone>
+  		<organization>HYY</organization>
+  		<organizationUrl>http://www.hongyuyuan.com</organizationUrl>
+  	</developer>
+  </developers>
+  
+  
+  
+    <!-- <dependencyManagement> -->
   	<dependencies>
   		<dependency>
   			<groupId>junit</groupId>
@@ -19,6 +57,11 @@
   			<artifactId>hbase</artifactId>
   			<version>0.94.3</version>
   		</dependency>
+  		<dependency>
+    		<groupId>org.apache.hadoop</groupId>
+    		<artifactId>hadoop-core</artifactId>
+    		<version>1.0.4</version>
+		</dependency>
   	</dependencies>
   <!-- </dependencyManagement> -->
   
