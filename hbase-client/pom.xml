@@ -55,7 +55,7 @@
   		<dependency>
   			<groupId>org.apache.hbase</groupId>
   			<artifactId>hbase</artifactId>
-  			<version>0.94.3</version>
+  			<version>0.90.6-cdh3u5</version>
   		</dependency>
   		<dependency>
     		<groupId>org.apache.hadoop</groupId>
@@ -70,5 +70,54 @@
   		<id>central</id>
   		<url>http://repo1.maven.apache.org/maven2</url>
   	</repository>
+  	<repository>
+      <id>cdh.snapshot.repo</id>
+      <url>https://repository.cloudera.com/content/repositories/snapshots</url>
+      <name>Cloudera Snapshot Repository</name>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>cdh.repo</id>
+      <url>https://repository.cloudera.com/content/groups/cloudera-repos</url>
+      <name>Cloudera Repository</name>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>temp-thrift</id>
+      <name>Thrift 0.2.0</name>
+      <url>http://people.apache.org/~rawson/repo/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>java.net</id>
+      <name>Java.Net</name>
+      <url>http://download.java.net/maven/2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>codehaus</id>
+      <name>Codehaus Public</name>
+      <url>http://repository.codehaus.org/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
   </repositories>
 </project>
