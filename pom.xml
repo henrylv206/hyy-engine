@@ -4,4 +4,10 @@
   <artifactId>hyy-engine</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <modules>
+  	<module>hadoop-client</module>
+  	<module>hbase-client</module>
+  	<module>hive-client</module>
+  	<module>thrift-java</module>
+  </modules>
 </project>
