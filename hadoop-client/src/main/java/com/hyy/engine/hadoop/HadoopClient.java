@@ -1,8 +1,12 @@
 package com.hyy.engine.hadoop;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.MalformedURLException;
 import java.net.URI;
 
 import org.apache.hadoop.conf.Configuration;
@@ -10,21 +14,26 @@ import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IOUtils;
+import org.apache.hadoop.util.Progressable;
 
 public class HadoopClient {
+	
 	public static void main(String[] args) {
 		String src = "d://person.thrift";
 		String dst = "hdfs://10.12.12.97:9000/user/henry/input/qq3.txt";
 
 		try {
-			uploadToHdfs(src, dst);
+			//uploadToHdfs(src, dst);
 
-			deleteFromHdfs(dst);
+			//deleteFromHdfs(dst);
 
-			dst = "hdfs://10.12.12.97:9000/user/henry/input";
-			getDirectoryFromHdfs(dst);
+			//dst = "hdfs://10.12.12.97:9000/user/henry/input";
+			//getDirectoryFromHdfs(dst);
 
-			readFromHdfs(dst);
+			//readFromHdfs(dst);
+			
+			urlCat();
 			
 			System.out.println("SUCCESS");
 		} catch (Exception e) {
@@ -32,6 +41,16 @@ public class HadoopClient {
 		}		
 	}
 
+	private static void urlCat() throws MalformedURLException, IOException {
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(URI.create("hdfs://10.12.12.97:9000/user/henry/input/qq3.txt"), conf);
+				
+		FileStatus status = fs.getFileStatus(new Path("hdfs://10.12.12.97:9000/user/henry/input/pp2.war"));
+		System.out.println(status.getPath());
+		
+		
+	}
+	
 	/**
 	 * upload to hdfs
 	 * 
