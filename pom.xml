@@ -9,5 +9,6 @@
   	<module>hbase-client</module>
   	<module>hive-client</module>
   	<module>thrift-java</module>
+  	<module>hyy-utils</module>
   </modules>
 </project>
